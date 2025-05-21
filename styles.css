@@ -5,7 +5,7 @@ html,body{
 
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: rgb(231, 216, 216);
+    background-color:beige;
 }
 
 header{
@@ -15,22 +15,6 @@ header{
     position: relative;
     padding: 20px 10px;
     background:linear-gradient(to right, rgb(81, 97, 176), blue,darkblue);
- #   border-radius: 100px;
-}
-
-header h1{
-    font-weight: normal;
-    text-align: center;
-    font-size: 6rem;
-    padding: 0;
-    margin: 0;
-}
-
-header h2{
-    margin: 0;
-    font-weight: normal;
-    text-align: center;
-    font-size: 1.5rem;
 }
 
 header:before{
@@ -64,6 +48,21 @@ header:after{
 
 }
 
+header h1{
+    font-weight: normal;
+    text-align: center;
+    font-size: 6rem;
+    padding: 0;
+    margin: 0;
+}
+
+header h2{
+    margin: 0;
+    font-weight: normal;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
 nav{
     text-align: center;
     margin: 20px 0px;
@@ -81,3 +80,43 @@ nav button:hover{
     border-color: rgb(25, 142, 163) ;
     background-color: rgb(25, 142, 163);
 }
+
+main{
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    
+    
+}
+main article{
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: row-reverse;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+main article:hover img{
+    transform: rotate(10turn) scale(0,0);
+}
+
+.animal-card-text {
+    padding: 15px 20px;
+     
+}
+
+.animal-card-photo{
+    min-width: 200px;
+    overflow: hidden;
+
+}
+
+.animal-card-photo img {
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    transition:transform 2s,ease-in-out 0.5s,color 1s;
+
+}
+
