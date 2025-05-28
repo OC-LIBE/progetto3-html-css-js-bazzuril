@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Progetto 3 di Loris sugli animali</title>
     <link href="styles.css" rel="stylesheet">
+    <script src="main.js" defer ></script>
 </head>
 <body>
 
@@ -24,50 +25,30 @@
     </nav>
 
 <main>
-    <article>
-        <section class="animal-card-text"> 
-            <h1>
-                nome del pirlozzo
-            </h1>
-            <small>
-                <span>2 anni </span>
-                <span>gatto ritardato</span>
-            </small>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut odit ipsam ad aspernatur porro inventore placeat officia, labore modi sequi at molestias tempore deserunt, eius doloribus. Praesentium rem natus nihil.</p>
-            <a href="https://depositphotos.com/it/photos/animali-stupidi.html"  target="_blank" class="adotta-bottone">  
-            </a>
+    <template id="animal-card-template">
+        <article>
+            <section class="animal-card-text"> 
+                <h1>
+                    nome del pirlozzo
+                </h1>
+                <small>
+                    <span class = "primo span">2 anni </span>
+                    <span>cane </span>
+                </small>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut odit ipsam ad aspernatur porro inventore placeat officia, labore modi sequi at molestias tempore deserunt, eius doloribus. Praesentium rem natus nihil.</p>
+                <a href="https://depositphotos.com/it/photos/animali-stupidi.html"  target="_blank" class="adotta-bottone">  
+                </a>
 
-        </section>
-        <section class="animal-card-photo"> 
+            </section>
+            <section class="animal-card-photo"> 
               <img   class="fit-picture"
-            src="/static/dog2.webp"
+            src="/static/foto-divertenti-animail-facce-buffe-38.jpg"
             alt="un bellissimo cagnolino " >
             
-        </section>
+            </section>
 
-    </article>
-     <article>
-        <section class="animal-card-text"> 
-            <h1>
-                nome del pirlozzo
-            </h1>
-            <small>
-                <span>2 anni </span>
-                <span>gatto ritardato</span>
-            </small>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut odit ipsam ad aspernatur porro inventore placeat officia, labore modi sequi at molestias tempore deserunt, eius doloribus. Praesentium rem natus nihil.</p>
-            <a href="https://depositphotos.com/it/photos/animali-stupidi.html"  target="_blank" class="adotta-bottone">  
-            </a>
-
-        </section>
-        <section class="animal-card-photo"> 
-              <img   class="fit-picture"
-            src="/static/dog2.webp"
-            alt="un bellissimo cagnolino " >
-            
-        </section>
-
-    </article>
+        </article>
+    </template>
 </main>
 </body>
 </html>

@@ -98,7 +98,7 @@ main article{
 }
 
 main article:hover img{
-    transform: rotate(10turn) scale(0,0);
+    transform: rotate(10deg) scale(1.5);
 }
 
 .animal-card-text {
