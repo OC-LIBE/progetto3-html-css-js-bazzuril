@@ -120,3 +120,17 @@ main article:hover img{
 
 }
 
+.animals-buttons{
+    color: rgb(25, 15, 124);
+    border-color: rgb(38, 75, 177) ;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: rgb(228, 216, 202);
+}
+
+
+.animal-card-text button :hover {
+    color: rgb(0, 0, 0);
+    border-color: rgb(25, 142, 163) ;
+    background-color: rgb(25, 142, 163);
+}

@@ -18,6 +18,7 @@ async function displayPets() {
     const today = new Date();
     let year = today.getFullYear()
 
+
     Pets.forEach(pet=>{
         const clone = template.content.cloneNode
         (true)
@@ -28,14 +29,17 @@ async function displayPets() {
         const image = clone.querySelector('.animal-card-photo img')
         image.src = pet.photo
         //console.log(pet.photo)
+
         //aggiorniamo i nomi
         const name = clone.querySelector('.animal-name')
         name.textContent= pet.name
         //console.log(pet.name)
+
         //aggiorniamo le speci
         const species = clone.querySelector('.second-span-species')
         species.textContent = pet.species 
-        console.log(pet.species)
+        // console.log(pet.species)
+
         //aggiorniamo le età
         const birthYear = clone.querySelector('.first-span-age')
         
@@ -43,17 +47,16 @@ async function displayPets() {
 
         let age = year-pet.birthYear
         // console.log(age)
-        birthYear.textContent = age 
+        
         
         if (age < 1){
             age = " is less than one year old";
         } else if (age == 1){
             age ="is one year old";
-        } else  (age > 1){
-            age = "is  years old";
+        } else {
+            age =    " anni";
         }
-        // problema rimane qua, non mi carica l'eta e mi rende il sito vuoto
-        
+        birthYear.textContent = age 
 
 
         //aggiorniamo le descrizioni
@@ -61,8 +64,10 @@ async function displayPets() {
         description.textContent = pet.description 
         // console.log(pet.description)
         
-        
-
+        // bottone di ogni articolo
+        const animalsButton = clone.querySelector('.adotta-bottone')
+        animalsButton.textContent = pet.animalsButton 
+       
         wrapper.appendChild(clone)
 
         }
@@ -71,3 +76,18 @@ async function displayPets() {
 }
 
 displayPets()
+
+// questo serve per i bottoni di filtraggio
+function displayFilterAnimals(e){
+    console.log(e.target.dataset.filterAnimals);
+
+};
+const filterButtons = document.querySelectorAll
+('nav button');
+filterButtons.forEach(button => {
+    button.addEventListener('click',(e) => {
+        displayFilterAnimals(e)
+    }
+    )
+});
+console.log(filterButtons)
