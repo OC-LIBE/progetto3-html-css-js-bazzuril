@@ -54,7 +54,7 @@ async function displayPets() {
         } else if (age == 1){
             age ="is one year old";
         } else {
-            age =    " anni";
+            age =  " anni";
         }
         birthYear.textContent = age 
 
@@ -64,9 +64,10 @@ async function displayPets() {
         description.textContent = pet.description 
         // console.log(pet.description)
         
-        // bottone di ogni articolo
+        // bottone di ogni articolo ---> ancora da fare non finito(devi modificare href in https://frapollif.github.io/pet-adoption-data/pets/id dell'animale/ )
         const animalsButton = clone.querySelector('.adotta-bottone')
-        animalsButton.textContent = pet.animalsButton 
+        animalsButton.setAttribute("href",`https://frapollif.github.io/pet-adoption-data/pets/${pet.id}/`)
+        animalsButton.textContent = `Adotta ${pet.name}` 
        
         wrapper.appendChild(clone)
 
